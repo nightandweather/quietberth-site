@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Support · RUIN</title>
+  <meta name="description" content="RUIN support: controls, where records are kept, how New game archives old records, resetting options, known limitations, contact.">
+  <link rel="canonical" href="https://quietberth.com/ruin/en/support.html">
+  <link rel="alternate" hreflang="ko" href="https://quietberth.com/ruin/support.html">
+  <link rel="alternate" hreflang="en" href="https://quietberth.com/ruin/en/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://quietberth.com/ruin/support.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RUIN: First Job">
+  <meta property="og:title" content="Support · RUIN">
+  <meta property="og:description" content="RUIN support: controls, where records are kept, how New game archives old records, resetting options, known limitations, contact.">
+  <meta property="og:url" content="https://quietberth.com/ruin/en/support.html">
+  <meta property="og:locale" content="en_GB">
+  <meta name="theme-color" content="#0b0907">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="../assets/wordmark.svg" alt="RUIN" width="92" height="24"></a>
+      <nav aria-label="Main">
+        <ul>
+        <li><a href="index.html">Game</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <p class="lang" aria-label="Language"><a href="../support.html" lang="ko" hreflang="ko">한국어</a> · <span lang="en">English</span></p>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <h1>Support</h1>
+      <p class="lede">RUIN is still in development and there is no public build yet. This page is written ahead of release so that it can be used as it is, and it will be corrected whenever the build changes.</p>
+
+      <h2 id="help">How to get help</h2>
+      <ol>
+        <li>Check <a href="#controls">Controls</a> and <a href="#known">Known limitations</a> below first.</li>
+        <li>If that does not solve it, write to the address under <a href="#contact">Contact</a>. One developer reads and answers every message. A reply usually takes a few days and can take longer.</li>
+        <li>It helps to include: your Mac model and macOS version, where you got the game, what you were doing and what happened. Please send record files only if asked.</li>
+      </ol>
+
+      <h2 id="controls">Controls</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>Keyboard and mouse</caption>
+          <thead>
+            <tr><th scope="col">Input</th><th scope="col">What it does</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></th><td>Walk</td></tr>
+            <tr><th scope="row">Mouse</th><td>Look</td></tr>
+            <tr><th scope="row"><kbd>E</kbd></th><td>Interact, confirm, pick up</td></tr>
+            <tr><th scope="row"><kbd>Q</kbd></th><td>Decline, cancel</td></tr>
+            <tr><th scope="row"><kbd>C</kbd></th><td>Switch between first person and third person</td></tr>
+            <tr><th scope="row">Mouse wheel</th><td>Third-person camera distance</td></tr>
+            <tr><th scope="row"><kbd>Esc</kbd></th><td>Menu (pause, map, options)</td></tr>
+            <tr><th scope="row">Hold <kbd>X</kbd></th><td>Skip a scene. A short press does nothing.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Gamepads</strong> are supported. The left stick walks and the right stick looks. The bottom face button (A or ✕) interacts and confirms, the right one (B or ○) declines and cancels, the left one (X or □) switches the view, holding the top one (Y or △) skips a scene, and Start (Options) opens the menu. On-screen prompts follow the device you used last.</p>
+      <p class="small muted">This describes the build in development. If the release build differs, this table will be corrected.</p>
+
+      <h2 id="saves">Where your records are kept</h2>
+      <p>Records exist only on your Mac. The game sends them nowhere.</p>
+      <pre><code>~/Library/Application Support/RUIN/ShortEpisode/v1/slot-01/</code></pre>
+      <p>In Finder, press <kbd>⇧</kbd> <kbd>⌘</kbd> <kbd>G</kbd> (Go → Go to Folder) and paste the path. The Mac App Store version keeps the same structure inside the app's own folder.</p>
+      <pre><code>~/Library/Containers/(app identifier)/Data/Library/Application Support/RUIN/</code></pre>
+      <p>A store version and a directly downloaded version cannot see each other's records. That is how macOS protects apps; nothing is broken.</p>
+
+      <h3 id="new-game">"New game" never deletes an old record</h3>
+      <p>When you choose <strong>New game</strong> (<span lang="ko">새 게임</span>) in the menu, the current record is not deleted. It is moved into an archive folder, and each move creates a new dated folder there.</p>
+      <pre><code>~/Library/Application Support/RUIN/ShortEpisode/v1/slot-01/Archive/</code></pre>
+      <p>The game has no function that deletes a record. If you want to go back to an archived record, <a href="#contact">write in</a> and you will be told how.</p>
+
+      <h3 id="remove">Removing everything</h3>
+      <p>Deleting the app leaves your records in place. To remove records and options as well, quit the game and move the folder <code>~/Library/Application Support/RUIN</code> to the Bin yourself.</p>
+
+      <h2 id="options">Resetting options</h2>
+      <ol>
+        <li>Quit the game.</li>
+        <li>Delete this file, or move it somewhere else.
+          <pre><code>~/Library/Application Support/RUIN/options-v1.cfg</code></pre>
+        </li>
+        <li>Start the game again. It starts with default options and writes a new file.</li>
+      </ol>
+      <p>Deleting the options file does not touch your progress. If the options file is damaged and cannot be read, the game does not delete it: it renames it to <code>options-v1.damaged.cfg</code> and starts with defaults.</p>
+
+      <h2 id="known">Known limitations</h2>
+      <ul>
+        <li>In development. No release date or price has been set, and there is no build to download yet.</li>
+        <li>Apple Silicon Macs only. It does not run on Intel Macs.</li>
+        <li>Windows and iPhone/iPad are under consideration and are not promised.</li>
+        <li>Minimum requirements and the supported macOS version have not been measured yet. They will be listed once they have been.</li>
+        <li>There is one record slot.</li>
+        <li>The whole game is about 10 minutes long. That is all of it.</li>
+        <li>Languages: Korean and English.</li>
+      </ul>
+
+      <h2 id="contact">Contact</h2>
+      <p>Write to the developer, Lee Kanghoun. How your email is handled is described in the <a href="privacy.html#email">privacy policy</a>.</p>
+      <p class="contact">hello@quietberth.com</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+        <li><a href="index.html">Game</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+      <p>© 2026 Lee Kanghoun · Quiet Berth. Solo developer, South Korea.</p>
+      <p>This site sets no cookies, tracks nobody, and loads nothing from other servers.</p>
+    </div>
+  </footer>
+</body>
+</html>

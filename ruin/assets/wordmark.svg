@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 60" role="img" aria-label="RUIN">
+  <title>RUIN</title>
+  <g fill="none" stroke="#f2ddc2" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M6 54V6h20a12 12 0 0 1 0 24H6M24 30l16 24"/>
+    <path d="M72 6v34a14 14 0 0 0 28 0V6"/>
+    <path d="M136 6v48"/>
+    <path d="M172 54V6l32 48V6"/>
+  </g>
+</svg>
